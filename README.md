@@ -1,9 +1,18 @@
 # local-llm-guide
 This is a guide on how to set up LLM's locally for OpenWebUI and Brave Browser
 
+
+
 This guide will be in two sections
 
 **first section is for Open WebUI and the second section is for Brave BYOM**
+
+# Table of Contents
+
+- [Setting Up Open WebUI with Ollama](#setting-up-open-webui-with-ollama)
+- [Brave BYOM via Ollama](#brave-byom-via-ollama)
+- [Local LLM Setup via LMStudioAI](#local-llm-setup-via-lmstudioai)
+
 
 # Open WebUI
 
