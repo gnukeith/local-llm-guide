@@ -106,7 +106,9 @@ note 2: This will require an account, if you are not into that you can use:
 
 
 How to keep your Docker up-to-date:
+```
 docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-webui
+```
 
 In case you want to update your local Docker installation to the latest version, you can do it with [Watchtower](https://containrrr.dev/watchtower/).
 
@@ -143,7 +145,9 @@ ollama pull llama3
 ```
 ollama pull mathstral
 ```
+```
 ollama pull codegeex4
+```
 ```
 ollama pull phi3:medium
 ```
