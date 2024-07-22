@@ -17,6 +17,10 @@ Running a local LLM (Language Model) on your own hardware offers several advanta
 
 Overall, running a local LLM offers enhanced privacy, control, and efficiency, making it an attractive option for individuals and organizations with specific needs and resource availability.
 
+## Before you continue:
+***You should have at least 8 GB of RAM available to run the 7B models, 16 GB to run the 13B models, and 32 GB to run the 33B models.***
+
+
 ## This guide will be in two sections
 
 **first section is for Open WebUI and the second section is for Brave BYOM**
