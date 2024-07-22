@@ -170,7 +170,7 @@ Open it, search for your preferred models in the top bar and hit Download.
 Me and Brave recommend Llama3 8B and Mistral 7B since they don't use much memory
 but are quite capable, if you are feeling fancy Phi3-medium is good.
 
-![LMStudio Download](img/lstudio_download.png)
+![LMStudio Download](img/lstudio_downlaod.png)
 
 
 2) Start a local server in the LMStudio app with your chosen model
