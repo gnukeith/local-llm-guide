@@ -77,13 +77,11 @@ sudo docker run hello-world
 (This is just to test if everything went correctly)
 ```
 
-```
-If you are on AMD hardware everything should be good to go
-```
+**If you are on AMD hardware everything should be good to go**
 
-```
-If you are on NVIDIA hardware there's more commands you need to do.
-```
+
+**If you are on NVIDIA hardware there's more commands you need to do.**
+
 
 ```
 sudo apt-get update
