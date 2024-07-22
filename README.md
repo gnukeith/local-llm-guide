@@ -150,14 +150,19 @@ sudo docker run hello-world
 
 - **NVIDIA Hardware:** Additional steps are required
 
+    - Update the package index by running the command:
     ```
     sudo apt-get update
     ```
 
+    - Install the NVIDIA container toolkit by running the command:
     ```
     sudo apt-get install -y nvidia-container-toolkit
     ```
 
+    ***The NVIDIA Container Toolkit enables users to build and run GPU-accelerated containers. It includes a container runtime library and utilities to automatically configure containers to leverage NVIDIA GPUs. This toolkit supports various container engines such as Docker, LXC, and Podman, making it versatile for different containerized environments.***
+
+    - Restart the Docker service to apply the changes by running the command:
     ```
     sudo systemctl restart docker
     ```
@@ -177,7 +182,28 @@ sudo docker run -d -p 8080:8080 --name open-webui --network host -e WEBUI_AUTH=F
 ```
 
 This command will make the Docker container use your host network, which can improve performance.
-    
+
+If you set up WebUI with your host network,
+just go to http://127.0.0.1:8080 in your browser to access the Open WebUI.
+
+Else go to  http://localhost:3000 in your browser to access the Open WebUI.
+(In my experience VPN's can cause issues so be aware of that)
+
+### Step 3 (Optional but recommended): Adding search engines to Open WebUI
+Yes! you can add search engines to Open WebUI. Here is how you can do it:
+
+1. Go to the Open WebUI interface by going into your admin panel and clicking on the "Web Search" tab.
+
+2. then just choose a search engine, I am using Brave search which you can use for free or pay.
+
+![Adding search engine](img/bravesearch.png)
+
+
+DDG is completely free and you can use it as well.
+
+You can also self-host SearXNG (Docker)
+
+https://docs.openwebui.com/tutorial/web_search#searxng-docker
 
 How to keep your Docker up-to-date:
 
