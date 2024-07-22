@@ -236,6 +236,8 @@ When you click the gear icon in Leo, the new AI model you added will now be list
 
 If you liked this guide and want to help with my orange juice addiction you can donate here:
 
+
+***Monero***
 <p align="center">
     <img src="img/monero_qr.jpg" alt="Monero" width="512px" height="512px">
 </p>
@@ -243,3 +245,12 @@ If you liked this guide and want to help with my orange juice addiction you can 
 ```
 47E2j1R4HrCcvV75mNo5DRRmSQcmi9rgKSFkd1o4HbshXx5NCiHu7zsFy7AgiWrEZrZ2o1aLdfNeJPD74y6RNCVC9LvgnnD
 ```
+
+***Bitcoin***
+<p align="center">
+    <img src="img/bitcoin_qr.png" alt="Bitcoin" width="512px" height="512px">
+</p>
+    
+    ```
+    bc1q3zsfj3k0utdkm725rg43vhu3syw0x5va8mzspm
+    ```
