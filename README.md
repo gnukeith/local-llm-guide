@@ -54,20 +54,25 @@ ollama pull llama3-chatqa:8b
 
 In my experience it's been very good for casual conversations :)
 
-### Step 2: Install Open WebUI via docker - Linux
+### Step 2: Install Open WebUI via docker - Debian/Ubuntu based distros
+
+Update your package index
 
 ```
 sudo apt-get update
 ```
 
+Install packages to allow apt to use a repository over HTTPS
 ```
 sudo apt-get install ca-certificates curl
 ```
 
+Create a directory for the Docker apt keyring
 ```
 sudo install -m 0755 -d /etc/apt/keyrings
 ```
 
+Add Docker's official GPG key
 ```
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 ```
@@ -76,63 +81,96 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 ```
 
+Add the Docker repository to Apt sources:
 ```
 echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+**Note:** If you are using an Ubuntu derivative distribution, such as Linux Mint, you might need to use `UBUNTU_CODENAME` instead of `VERSION_CODENAME`. However, on Pop!_OS, `VERSION_CODENAME` works correctly.
 
+Update your package index again
 ```
 sudo apt-get update
 ```
 
+Install Docker Engine, CLI, and containerd
 ```
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
+Use the following command to run a test image
 ```
 sudo docker run hello-world
 ```
+***This command downloads a test image and runs it in a container. If successful, it prints a message confirming that Docker is installed and functioning correctly.***
 
-```
-(This is just to test if everything went correctly)
-```
 
 **Hardware Considerations**
 
 
 - **AMD Hardware:** You should be good to go.
+
+    **Run Open WebUI without modifications**
+    ```
+    docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+    ```
+    - Runs the container in the background (-d).
+
+    - Maps port 8080 in the container to port 3000 on the host (-p 3000:8080).
+
+    - Enables container-to-host communication (--add-host=host.docker.internal:host-gateway).
+
+    - Creates a persistent volume (-v open-webui:/app/backend/data).
+
+    - Names the container open-webui (--name open-webui).
+
+    - Ensures the container always restarts if it stops or Docker restarts (--restart always).
+
+    - Uses the Open WebUI image from the GitHub Container Registry (ghcr.io/open-webui/open-webui:main).
+
+    ***Run with local host Modifications:***
+    ```
+    docker run -d --network=host -v open-webui:/app/backend/data -e WEBUI_AUTH=False -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+    ```
+    - Uses the host's network stack to bind directly to 127.0.0.1 (--network=host).
+    - Disables authentication (-e WEBUI_AUTH=False).
+    - Sets the base URL for Ollama (-e OLLAMA_BASE_URL=http://127.0.0.1:11434).
+
+
 - **NVIDIA Hardware:** Additional steps are required
 
+    ```
+    sudo apt-get update
+    ```
 
-```
-sudo apt-get update
-```
+    ```
+    sudo apt-get install -y nvidia-container-toolkit
+    ```
 
-```
-sudo apt-get install -y nvidia-container-toolkit
-```
+    ```
+    sudo systemctl restart docker
+    ```
 
-```
-sudo systemctl restart docker
-```
-
-Run Open WebUI
-```
-sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
-```
-
+    ***Run Open WebUI - Modififed***
+    ```
+    sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+    ```
 **Notes:**
 
-    1. This will make the docker run with your host network, in my experience, works better.
+This setup requires an account. If you prefer not to create one, alternative options are available.
 
-    2. This setup requires an account. If you prefer not to create one, alternatives options are available.
+To run the Docker container with your host network, use the following command:
 
-    ```
-    sudo docker run -d -p 8080:8080 --name open-webui --network host -e WEBUI_AUTH=False -e OLLAMA_BASE_URL=http://127.0.0.1:11434 ghcr.io/open-webui/open-webui:main
-    ```
+```
+sudo docker run -d -p 8080:8080 --name open-webui --network host -e WEBUI_AUTH=False -e OLLAMA_BASE_URL=http://127.0.0.1:11434 ghcr.io/open-webui/open-webui:main
+```
+
+This command will make the Docker container use your host network, which can improve performance.
+    
 
 How to keep your Docker up-to-date:
-```
+
+```    
 docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-webui
 ```
 
@@ -148,6 +186,10 @@ In case you want to update your local Docker installation to the latest version,
 ### Step 1: Install Brave Nightly
 
 Download and install Brave Nightly from [https://brave.com/download-nightly/](https://brave.com/download-nightly/).
+
+<p align="center">
+  <img src="img/brave_nightly.png" alt="BYOM choose model">
+</p>
 
 ### Step 2: Install Ollama
 
@@ -191,6 +233,10 @@ http://localhost:11434/v1/chat/completions
 ### Step 1: Install Brave Nightly
 
 Download and install Brave Nightly from [https://brave.com/download-nightly/](https://brave.com/download-nightly/).
+
+<p align="center">
+  <img src="img/brave_nightly.png" alt="BYOM choose model">
+</p>
 
 ### Step 2: Download LMStudio
 
