@@ -205,7 +205,7 @@ graph TD
     C
     end
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style A fill:#f9f,stroke:#fff,stroke-width:2px
     style B fill:#bbf,stroke:#333,stroke-width:2px
     style C fill:#bfb,stroke:#333,stroke-width:2px
     style D fill:#fbb,stroke:#333,stroke-width:2px
