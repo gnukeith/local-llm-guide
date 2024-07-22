@@ -185,6 +185,8 @@ docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/wa
 
 In case you want to update your local Docker installation to the latest version, you can do it with [Watchtower](https://containrrr.dev/watchtower/).
 
+***Visualization of how the WebUI, Docker, and Ollama work together in your setup.***
+
 ```mermaid
 graph TD
     A[User's Browser] -->|Access via<br>http://localhost:11434| B[Docker: Open WebUI]
