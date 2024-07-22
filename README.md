@@ -19,7 +19,7 @@ as for macOS and Windows go to:
 https://ollama.com/download
 
 Check if ollama is running:
-curl http://127.0.0.1:11434/api/chat
+http://localhost:11434/
 
 ![Ollama runnig](img/ollama_running.jpeg)
 
@@ -139,6 +139,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ```
 
 Check if ollama is running:
+http://localhost:11434/
 ![Ollama runnig](img/ollama_running.jpeg)
 
 
