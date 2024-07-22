@@ -58,6 +58,11 @@ ollama pull llama3-chatqa:8b
 
 In my experience it's been very good for casual conversations :)
 
+## Step 2: For Windows and macOS
+Download Docker Desktop from [Docker's official website](https://www.docker.com/products/docker-desktop).
+
+Follow the installation instructions provided on the website. After installation, open Docker Desktop to ensure it's running properly.
+
 ### Step 2: Install Open WebUI via docker - Debian/Ubuntu based distros
 
 Update your package index
@@ -180,7 +185,30 @@ docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/wa
 
 In case you want to update your local Docker installation to the latest version, you can do it with [Watchtower](https://containrrr.dev/watchtower/).
 
+```mermaid
+graph TD
+    A[User's Browser] -->|Access via<br>http://localhost:11434| B[Docker: Open WebUI]
+    B -->|Communicate via<br>http://127.0.0.1:11434| C[Ollama Service]
+    B -->|Store Data| D[(Docker Volume:<br>open-webui)]
+    E[Host Machine] -->|Run with<br>--network=host| B
+    E -->|Run Directly| C
+    
+    subgraph Docker Environment
+    B
+    D
+    end
+    
+    subgraph Host Environment
+    E
+    C
+    end
 
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#fbb,stroke:#333,stroke-width:2px
+    style E fill:#ddd,stroke:#333,stroke-width:2px
+```
 
 
 # Section 2 Brave BYOM:
@@ -201,6 +229,9 @@ For Linux, use the following command:
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ```
+
+otherwise, go to:
+https://ollama.com/
 
 Check if ollama is running:
 http://localhost:11434/
@@ -281,6 +312,9 @@ When you click the gear icon in Leo, the new AI model you added will now be list
 <p align="center">
   <img src="img/selecting_model_lmstudio.png" alt="BYOM choose model">
 </p>
+
+***If you find any errors in this guide pls let me know
+I will change it ASAP***
 
 # Begging sections
 
