@@ -33,6 +33,8 @@ Overall, running a local LLM offers enhanced privacy, control, and efficiency, m
 
 # Open WebUI
 
+***Open WebUI is an extensible, self-hosted interface for interacting with large language models (LLMs). It is designed to operate entirely offline, providing a user-friendly platform for managing various AI models and their interactions.***
+
 ### Step 1: Install Ollama
 
 Linux command: 
@@ -205,11 +207,11 @@ graph TD
     C
     end
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#fff
-    style B fill:#bbf,stroke:#333,stroke-width:2px,color:#fff
-    style C fill:#bfb,stroke:#333,stroke-width:2px,color:#fff
-    style D fill:#fbb,stroke:#333,stroke-width:2px,color:#fff
-    style E fill:#ddd,stroke:#333,stroke-width:2px,color:#fff
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:black
+    style B fill:#bbf,stroke:#333,stroke-width:2px,color:black
+    style C fill:#bfb,stroke:#333,stroke-width:2px,color:black
+    style D fill:#fbb,stroke:#333,stroke-width:2px,color:black
+    style E fill:#ddd,stroke:#333,stroke-width:2px,color:black
 ```
 
 # Section 2 Brave BYOM:
