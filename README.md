@@ -112,35 +112,22 @@ docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/wa
 
 In case you want to update your local Docker installation to the latest version, you can do it with [Watchtower](https://containrrr.dev/watchtower/).
 
-Section 2 Brave BYOM:
 
 
 
-Step 1.
+# Section 2 Brave BYOM:
 
-Install brave nightly:
-https://brave.com/download-nightly/
+## Brave BYOM via Ollama
 
-step 2.
+### Step 1: Install Brave Nightly
 
-Install Ollama
+Download and install Brave Nightly from [https://brave.com/download-nightly/](https://brave.com/download-nightly/).
 
-Linux command: 
-curl -fsSL https://ollama.com/install.sh | sh
+### Step 2: Install Ollama
 
-as for macOS and Windows go to:
-
-https://ollama.com/download
-
-step 3.
-
-Install a model:
-
-using this command: ollama pull modelname
-
-Example:
+For Linux, use the following command:
 ```
-ollama pull llama3
+curl -fsSL https://ollama.com/install.sh | sh
 ```
 ```
 ollama pull mathstral
@@ -153,44 +140,44 @@ ollama pull phi3:medium
 ```
 
 you can find all the models here:
-https://ollama.com/library
-
-You can also set up your local LLM via LMStudioAI
-
-Step 1.
-
-Install brave nightly:
-https://brave.com/download-nightly/
-
-step 2.
-
-1) Download LMStudio from http://lmstudio.ai.
-
-Open it, search for your preferred models in the top bar and hit Download.
-Me and Brave recommend Llama3 8B and Mistral 7B since they don't use much memory
-but are quite capable, if you are feeling fancy Phi3-medium is good.
-
-![LMStudio Download](img/lstudio_downlaod.png)
+https://ollama.com/library 
 
 
-2) Start a local server in the LMStudio app with your chosen model
+## Brave BYOM via LMStudio
 
-Click on the ↔️ icon in the left sidebar to open the Local Server panel.
+### Step 1: Install Brave Nightly
 
-Select a model to load on the dropdown at the top and hit Start Server (in green). Your chosen model is now running on your device!
+Download and install Brave Nightly from [https://brave.com/download-nightly/](https://brave.com/download-nightly/).
 
-![LMStudio Server](img/lmstudioserver.png)
+### Step 2: Download LMStudio
 
+1. Download LMStudio from [http://lmstudio.ai](http://lmstudio.ai).
 
-3) Connect Brave to LMStudio
+   Open it, search for your preferred models in the top bar, and hit Download. Me and Brave recommend Llama3 8B and Mistral 7B since they don't use much memory but are quite capable. If you are feeling fancy, Phi3-medium is good.
 
-In Brave Nightly, go to Settings > Leo and click Add new model. Enter the model request name as it appears in LMStudio’s Local Server panel.
+   ![LMStudio Download](img/lstudio_downlaod.png)
 
-Set the Server endpoint to http://localhost:1234/v1/chat/completions.
+### Step 3: Start a Local Server
 
-Click "Add model" and you're done!
+2. Start a local server in the LMStudio app with your chosen model.
 
-![Brave connections](img/bravebyom_connection_lmstudio.png)
+   Click on the ↔️ icon in the left sidebar to open the Local Server panel.
+
+   Select a model to load on the dropdown at the top and hit Start Server (in green). Your chosen model is now running on your device!
+
+   ![LMStudio Server](img/lmstudioserver.png)
+
+### Step 4: Connect Brave to LMStudio
+
+3. Connect Brave to LMStudio.
+
+   In Brave Nightly, go to Settings > Leo and click Add new model. Enter the model request name as it appears in LMStudio’s Local Server panel.
+
+   Set the Server endpoint to [http://localhost:1234/v1/chat/completions](http://localhost:1234/v1/chat/completions).
+
+   Click "Add model" and you're done!
+
+   ![Brave connections](img/bravebyom_connection_lmstudio.png)
 
 Now you're ready to use your local AI model in Brave Nightly.
 
