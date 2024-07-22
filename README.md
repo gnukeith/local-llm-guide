@@ -251,6 +251,25 @@ If you liked this guide and want to help with my orange juice addiction you can 
     <img src="img/bitcoin_qr.png" alt="Bitcoin" width="512px" height="512px">
 </p>
     
-    ```
-    bc1q3zsfj3k0utdkm725rg43vhu3syw0x5va8mzspm
-    ```
+```
+bc1q3zsfj3k0utdkm725rg43vhu3syw0x5va8mzspm
+```
+
+***Ethereum***
+<p align="center">
+    <img src="img/ethereum_qr.png" alt="Ethereum" width="512px" height="512px">
+</p>
+    
+```
+0xc8803D45ADE7c869bC3b15206e81fB47Bb0A44D8
+```
+
+
+***Basic attention token***
+<p align="center">
+    <img src="img/ethereum.png" alt="BAT" width="512px" height="512px">
+</p>
+        
+```
+0xc8803D45ADE7c869bC3b15206e81fB47Bb0A44D8
+```
