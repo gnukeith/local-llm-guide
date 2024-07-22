@@ -237,7 +237,7 @@ When you click the gear icon in Leo, the new AI model you added will now be list
 If you liked this guide and want to help with my orange juice addiction you can donate here:
 
 <p align="center">
-    <img src="img/monero_qr.jpg" alt="Monero" width="512px">
+    <img src="img/monero_qr.jpg" alt="Monero" width="512px" height="512px">
 </p>
 
 ```
