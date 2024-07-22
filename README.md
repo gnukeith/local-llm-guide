@@ -267,7 +267,7 @@ bc1q3zsfj3k0utdkm725rg43vhu3syw0x5va8mzspm
 
 ***Basic attention token***
 <p align="center">
-    <img src="img/ethereum.png" alt="BAT" width="512px" height="512px">
+    <img src="img/ethereum_qr.png" alt="BAT" width="512px" height="512px">
 </p>
         
 ```
