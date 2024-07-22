@@ -198,4 +198,6 @@ Access Leo by pressing Ctrl+B (Cmd+B on macOS).
 
 When you click the gear icon in Leo, the new AI model you added will now be listed as one of your options.
 
-![BYOM choose model](img/selecting_model_lmstudio.png)
+<p align="center">
+  <img src="img/selecting_model_lmstudio.png" alt="BYOM choose model">
+</p>
