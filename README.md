@@ -3,9 +3,9 @@ This is a guide on how to set up LLM's locally for OpenWebUI and Brave Browser
 
 This guide will be in two sections
 
-first section is for Open WebUI and the second section is for Brave BYOM
+**first section is for Open WebUI and the second section is for Brave BYOM**
 
-
+# Open WebUI
 
 Step 1.
 
@@ -77,10 +77,11 @@ sudo docker run hello-world
 (This is just to test if everything went correctly)
 ```
 
-**If you are on AMD hardware everything should be good to go**
+**Hardware Considerations**
 
 
-**If you are on NVIDIA hardware there's more commands you need to do.**
+- **AMD Hardware:** You should be good to go.
+- **NVIDIA Hardware:** Additional steps are required
 
 
 ```
@@ -95,15 +96,20 @@ sudo apt-get install -y nvidia-container-toolkit
 sudo systemctl restart docker
 ```
 
+Run Open WebUI
 ```
 sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
-Two notes
+**Notes:**
 
-note 1: this will make the docker run with your host network which in my experience works way better
-note 2: This will require an account, if you are not into that you can use:
+    1. This will make the docker run with your host network, in my experience, works better.
 
+    2. This setup requires an account. If you prefer not to create one, alternatives options are available.
+
+    ```
+    sudo docker run -d -p 8080:8080 --name open-webui --network host -e WEBUI_AUTH=False -e OLLAMA_BASE_URL=http://127.0.0.1:11434 ghcr.io/open-webui/open-webui:main
+    ```
 
 How to keep your Docker up-to-date:
 ```
