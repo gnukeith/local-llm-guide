@@ -154,3 +154,48 @@ ollama pull phi3:medium
 
 you can find all the models here:
 https://ollama.com/library
+
+You can also set up your local LLM via LMStudioAI
+
+Step 1.
+
+Install brave nightly:
+https://brave.com/download-nightly/
+
+step 2.
+
+1) Download LMStudio from http://lmstudio.ai.
+
+Open it, search for your preferred models in the top bar and hit Download.
+Me and Brave recommend Llama3 8B and Mistral 7B since they don't use much memory
+but are quite capable, if you are feeling fancy Phi3-medium is good.
+
+![LMStudio Download](img/lstudio_download.png)
+
+
+2) Start a local server in the LMStudio app with your chosen model
+
+Click on the ↔️ icon in the left sidebar to open the Local Server panel.
+
+Select a model to load on the dropdown at the top and hit Start Server (in green). Your chosen model is now running on your device!
+
+![LMStudio Server](img/lmstudioserver.png)
+
+
+3) Connect Brave to LMStudio
+
+In Brave Nightly, go to Settings > Leo and click Add new model. Enter the model request name as it appears in LMStudio’s Local Server panel.
+
+Set the Server endpoint to http://localhost:1234/v1/chat/completions.
+
+Click "Add model" and you're done!
+
+![Brave connections](img/bravebyom_connection_lmstudio.png)
+
+Now you're ready to use your local AI model in Brave Nightly.
+
+Access Leo by pressing Ctrl+B (Cmd+B on macOS).
+
+When you click the gear icon in Leo, the new AI model you added will now be listed as one of your options.
+
+![BYOM choose model](img/selecting_model_lmstudio.png)
