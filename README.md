@@ -1,24 +1,35 @@
 # local-llm-guide
-This is a guide on how to set up LLM's locally for OpenWebUI and Brave Browser
+**This is a guide on how to set up LLM's locally for Open WebUI and Brave Browser**
 
+### Why Run a Local LLM Instead of a Non-Local LLM?
 
+Running a local LLM (Language Model) on your own hardware offers several advantages over using cloud-based or remote LLMs:
 
-This guide will be in two sections
+1. **Privacy and Security:** Your data remains on your local machine, ensuring that sensitive information is not transmitted over the internet or stored on external servers.
+
+2. **Control and Customization:** You have full control over the models you use and can customize them to better suit your specific needs and preferences.
+
+3. **Reduced Latency:** Local LLMs provide faster response times since there is no need to communicate with remote servers, making interactions more efficient and seamless.
+
+4. **Cost Efficiency:** By using your own hardware, you can avoid ongoing subscription fees or usage costs associated with cloud-based LLM services.
+
+5. **Offline Accessibility:** Local LLMs can operate without an internet connection, making them useful in environments with limited or no internet access.
+
+Overall, running a local LLM offers enhanced privacy, control, and efficiency, making it an attractive option for individuals and organizations with specific needs and resource availability.
+
+## This guide will be in two sections
 
 **first section is for Open WebUI and the second section is for Brave BYOM**
 
 # Table of Contents
 
-- [Setting Up Open WebUI with Ollama](#setting-up-open-webui-with-ollama)
+- [Setting Up Open WebUI with Ollama](#open-webui)
 - [Brave BYOM via Ollama](#brave-byom-via-ollama)
-- [Local LLM Setup via LMStudioAI](#local-llm-setup-via-lmstudioai)
-
+- [Local LLM Setup via LMStudioAI](#brave-byom-via-lmstudio)
 
 # Open WebUI
 
-Step 1.
-
-Install Ollama
+### Step 1: Install Ollama
 
 Linux command: 
 curl -fsSL https://ollama.com/install.sh | sh
@@ -43,9 +54,7 @@ ollama pull llama3-chatqa:8b
 
 In my experience it's been very good for casual conversations :)
 
-Step 3.
-
-Install Open WebUI via docker - Linux
+### Step 2: Install Open WebUI via docker - Linux
 
 ```
 sudo apt-get update
@@ -222,3 +231,15 @@ When you click the gear icon in Leo, the new AI model you added will now be list
 <p align="center">
   <img src="img/selecting_model_lmstudio.png" alt="BYOM choose model">
 </p>
+
+# Begging sections
+
+If you liked this guide and want to help with my orange juice addiction you can donate here:
+
+<p align="center">
+  <img src="img/monero_qr.jpg" alt="Monero">
+</p>
+
+```
+47E2j1R4HrCcvV75mNo5DRRmSQcmi9rgKSFkd1o4HbshXx5NCiHu7zsFy7AgiWrEZrZ2o1aLdfNeJPD74y6RNCVC9LvgnnD
+```
