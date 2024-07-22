@@ -21,6 +21,8 @@ https://ollama.com/download
 Check if ollama is running:
 curl http://127.0.0.1:11434/api/chat
 
+![Ollama runnig](img/ollama_running.jpeg)
+
 
 Note: I would also recommend downloading some models before installing Open WebUI 
 
@@ -135,6 +137,12 @@ For Linux, use the following command:
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ```
+
+Check if ollama is running:
+![Ollama runnig](img/ollama_running.jpeg)
+
+
+**Models examle that you can download**
 ```
 ollama pull mathstral
 ```
@@ -148,6 +156,16 @@ ollama pull phi3:medium
 you can find all the models here:
 https://ollama.com/library 
 
+### Step 3: 
+
+connect your model to **Brave**.
+
+Label: Can be anything you want.
+Model request name: This is important since we are calling that specific model.
+Server endpoint: This is **always the same** for ollama
+http://localhost:11434/v1/chat/completions
+
+![Adding model](img/adding_to_brave.jpeg)
 
 ## Brave BYOM via LMStudio
 
